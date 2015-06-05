@@ -26,6 +26,10 @@ module.exports = function (grunt) {
 		'locale-replace': {
 			simple: {
 				locales: ["en_US", "fr_FR"],
+				textualAttributes: {
+					input: ["placeholder"],
+					'*': ['title']
+				},
 				translationsPath: "test/fixtures/locales/{locale}/i18n.js",
 				files: [
 					{src: ['test/fixtures/test.html'], dest: 'tmp/{locale}/'}
